@@ -23,4 +23,9 @@ class PostController extends Controller
         ]);
         return "sucess";
     }
+
+    public function index()
+    {
+        return Post::all();
+    } 
 }
