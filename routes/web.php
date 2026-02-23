@@ -3,5 +3,11 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome
+    ');
 });
+
+use App\Http\Controllers\PostController;
+
+Route::get('/posts/create', [PostController::class, 'create']);
+Route::POST('/posts', [PostController::class, 'store']);
